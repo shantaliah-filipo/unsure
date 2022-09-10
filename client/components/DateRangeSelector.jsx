@@ -11,6 +11,9 @@ function DateRangeSelector() {
   // date date
   const [calendar, setCalendar] = useState('')
 
+  // open and close the calendar on click
+  const [open, setOpen] = useState(true)
+
   useEffect(() => {
     setCalendar(format(new Date(), 'dd/MM/yyyy'))
   }, [])
@@ -27,11 +30,15 @@ function DateRangeSelector() {
       {/* use the value from state */}
       <input value={calendar} readOnly className="inputBox" />
 
-      <Calendar
-        date={new Date()}
-        onChange={handleSelect}
-        className="calendarElement"
-      />
+      {open && (
+        <Calendar
+          date={new Date()}
+          onChange={handleSelect}
+          className="calendarElement"
+          onClick={() => setOpen((open) => !open)}
+        />
+      )}
+
       <h3>Hi</h3>
     </div>
   )
