@@ -43,7 +43,6 @@ function DateRangeSelector() {
 
   return (
     <div className="calendarWrap">
-      {/* use the value from state */}
       <input
         value={` ${format(range[0].startDate, 'dd/MM/yyyy')} to ${format(
           range[0].endDate,
@@ -54,7 +53,6 @@ function DateRangeSelector() {
         onClick={() => setOpen((open) => !open)}
       />
 
-      {/* need to sort out the divs (and I think CSS) */}
       <div ref={refOne}>
         {open && (
           <DateRange
@@ -62,7 +60,7 @@ function DateRangeSelector() {
             editableDateInputs={true}
             moveRangeOnFirstSelection={false}
             ranges={range}
-            months={1}
+            months={2}
             direction="horizontal"
             className="calendarElement"
           />
