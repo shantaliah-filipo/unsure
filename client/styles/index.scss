@@ -2,11 +2,24 @@
 
 html, 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: url('../../server/public/images/aitutaki-unsplash.jpg') no-repeat center center fixed;
   background-size: cover;
+}
 
-  // background: red;
+h1 {
+  font-size: 40pt;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: white;
+  text-align: center;
+}
+
+h3 {
+  font-size: 15pt;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: white;
+  text-align: center;
+  /* margin-top: 10px; */
 }
 .App {
   text-align: center;
@@ -14,10 +27,12 @@ body {
 }
 
 input.inputBox {
-  font-size: 22px;
+  font-size: 2vh;
   padding: 5px 8px 4px 8px;
-  border-radius: 3px;
+  // border-radius: 3px;
   border: 1px solid #666;
+  text-align: center;
+  inline-size: min-content;
 }
 
 .calendarWrap {
