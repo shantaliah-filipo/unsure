@@ -1,10 +1,13 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import DateRangeSelector from './DateRangeSelector'
+import 'react-date-range/dist/styles.css'
+import 'react-date-range/dist/theme/default.css'
+
 function App() {
   return (
     <>
-      <div className="app">
-        <h1>Fullstack Boilerplate - with Fruits!</h1>
+      <div className="App">
+        <h1>Plan your trip to Rarotonga!</h1>
 
         <DateRangeSelector />
       </div>
