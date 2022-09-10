@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { Calendar, DateRange } from 'react-date-range'
+import { DateRange } from 'react-date-range'
 import format from 'date-fns/format'
 
 import { addDays } from 'date-fns'
@@ -8,8 +8,14 @@ import 'react-date-range/dist/styles.css'
 import 'react-date-range/dist/theme/default.css'
 
 function DateRangeSelector() {
-  // date date
-  const [calendar, setCalendar] = useState('')
+  // date
+  const [range, setRange] = useState([
+    {
+      startDate: new Date(),
+      endDate: addDays(new Date(), 7),
+      key: 'selection',
+    },
+  ])
 
   // open and close the calendar on click
   const [open, setOpen] = useState(false)
@@ -17,7 +23,6 @@ function DateRangeSelector() {
   const refOne = useRef(null)
 
   useEffect(() => {
-    setCalendar(format(new Date(), 'dd/MM/yyyy'))
     document.addEventListener('keydown', hideOnEscape, true)
     document.addEventListener('click', hideOnClickOutside, true)
   }, [])
@@ -36,28 +41,29 @@ function DateRangeSelector() {
     }
   }
 
-  // on date change, store date in state
-  const handleSelect = (date) => {
-    // console.log(date)
-    console.log(format(date, 'dd/MM/yyyy'))
-    setCalendar(format(date, 'dd/MM/yyyy'))
-  }
-
   return (
     <div className="calendarWrap">
       {/* use the value from state */}
       <input
-        value={calendar}
+        value={` ${format(range[0].startDate, 'dd/MM/yyyy')} to ${format(
+          range[0].endDate,
+          'dd/MM/yyyy'
+        )} `}
         readOnly
         className="inputBox"
         onClick={() => setOpen((open) => !open)}
       />
 
+      {/* need to sort out the divs (and I think CSS) */}
       <div ref={refOne}>
         {open && (
-          <Calendar
-            date={new Date()}
-            onChange={handleSelect}
+          <DateRange
+            onChange={(item) => setRange([item.selection])}
+            editableDateInputs={true}
+            moveRangeOnFirstSelection={false}
+            ranges={range}
+            months={2}
+            direction="horizontal"
             className="calendarElement"
           />
         )}
