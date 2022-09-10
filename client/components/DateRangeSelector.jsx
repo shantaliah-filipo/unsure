@@ -34,8 +34,6 @@ function DateRangeSelector() {
   }
 
   const hideOnClickOutside = (e) => {
-    // console.log(refOne.current)
-    // console.log(e.target)
     if (refOne.current && !refOne.current.contains(e.target)) {
       setOpen(false)
     }
@@ -43,6 +41,8 @@ function DateRangeSelector() {
 
   return (
     <div className="calendarWrap">
+      <h3>Select your travel dates below:</h3>
+
       <input
         value={` ${format(range[0].startDate, 'dd/MM/yyyy')} to ${format(
           range[0].endDate,
@@ -66,8 +66,6 @@ function DateRangeSelector() {
           />
         )}
       </div>
-
-      <h3>Hi</h3>
     </div>
   )
 }
