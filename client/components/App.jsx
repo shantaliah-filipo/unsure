@@ -1,11 +1,12 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import DateRangeSelector from './DateRangeSelector'
-// import './App.css'
+import 'react-date-range/dist/styles.css'
+import 'react-date-range/dist/theme/default.css'
 
 function App() {
   return (
     <>
-      <div className="app">
+      <div className="App">
         <h1>Fullstack Boilerplate - with Fruits!</h1>
 
         <DateRangeSelector />
