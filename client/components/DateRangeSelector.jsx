@@ -12,11 +12,22 @@ function DateRangeSelector() {
   const [calendar, setCalendar] = useState('')
 
   // open and close the calendar on click
-  const [open, setOpen] = useState(true)
+  const [open, setOpen] = useState(false)
 
   useEffect(() => {
     setCalendar(format(new Date(), 'dd/MM/yyyy'))
+    document.addEventListener('keydown', hideOnEscape, true)
+    document.addEventListener('click', hideOnClickOutside, true)
   }, [])
+
+  const hideOnEscape = (e) => {
+    console.log(e.key)
+    if (e.key === 'Escape') {
+      setOpen(false)
+    }
+  }
+
+  const hideOnClickOutside = () => {}
 
   // on date change, store date in state
   const handleSelect = (date) => {
@@ -28,14 +39,18 @@ function DateRangeSelector() {
   return (
     <div className="calendarWrap">
       {/* use the value from state */}
-      <input value={calendar} readOnly className="inputBox" />
+      <input
+        value={calendar}
+        readOnly
+        className="inputBox"
+        onClick={() => setOpen((open) => !open)}
+      />
 
       {open && (
         <Calendar
           date={new Date()}
           onChange={handleSelect}
           className="calendarElement"
-          onClick={() => setOpen((open) => !open)}
         />
       )}
 
