@@ -11,6 +11,10 @@ function DateRangeSelector() {
   // date date
   const [calendar, setCalendar] = useState('')
 
+  useEffect(() => {
+    setCalendar(format(new Date(), 'dd/MM/yyyy'))
+  }, [])
+
   // on date change, store date in state
   const handleSelect = (date) => {
     // console.log(date)
@@ -20,6 +24,9 @@ function DateRangeSelector() {
 
   return (
     <div className="calendarWrap">
+      {/* use the value from state */}
+      <input value={calendar} readOnly className="inputBox" />
+
       <Calendar
         date={new Date()}
         onChange={handleSelect}
