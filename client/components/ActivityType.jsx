@@ -8,12 +8,12 @@ function ActivityType() {
     <div>
       <h3>Which Activities Interest You?</h3>
       <>
-        <form className="card-body">
+        <form className="card">
           <ul className="activities-list">
             {activities.map(({ type }, index) => {
               return (
                 <li key={index}>
-                  <div className="card-body">
+                  <div className="card">
                     <div className="main">
                       <div className="activities-list-item">
                         <input

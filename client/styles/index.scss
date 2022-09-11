@@ -86,10 +86,15 @@ input.inputBox {
 }
 
 .card {
-  background-color: #B64233;
-  margin: 50px 10px 50px 50px;
-  padding: 20px;
+  background-color: #ef9f82;
+  opacity: 0.5;
+  // margin: 1vh 0.5vh 1vh 0.5vh;
+  // padding: 1vh;
   border: 1px solid white;
-  border-radius: 5px;
+  // border-radius: 5px;
+}
+
+.card:hover{
+    opacity: 1.0;
 }
 
