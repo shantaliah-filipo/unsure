@@ -1,7 +1,10 @@
 import React from 'react'
 
 function Submit() {
-  return <button>Leshgoooo</button>
+  function handleClick() {
+    console.log('leshgoooo')
+  }
+  return <button onClick={handleClick}>Leshgoooo</button>
 }
 
 export default Submit
