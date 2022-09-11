@@ -7,18 +7,15 @@ function ActivityType() {
   return (
     <div>
       <h3>Which Activities Interest You?</h3>
-      {/* <input type="checkbox" id="water-activities" />
-      Water-Based Activtities */}
       <>
-        <form>
+        <form className="card-body">
           <ul className="activities-list">
-            {/* <div className="inputActivities "> */}
             {activities.map(({ type }, index) => {
               return (
                 <li key={index}>
-                  <div className="main">
-                    <div className="activities-list-item">
-                      <div className="left-section">
+                  <div className="card-body">
+                    <div className="main">
+                      <div className="activities-list-item">
                         <input
                           type="checkbox"
                           id={`custom-checkbox-${index}`}
@@ -26,7 +23,6 @@ function ActivityType() {
                           value={name}
                         />
                         {type}
-                        {/* <div className="right-section"></div> */}
                       </div>
                     </div>
                   </div>
