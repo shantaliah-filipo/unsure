@@ -4,10 +4,6 @@ html,
 body {
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: url('../../server/public/images/aitutaki-unsplash.jpg') no-repeat center center fixed;
-  // attempt at a gradient
-  // background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%),
-  // url('../../server/public/images/aitutaki-unsplash.jpg');
-
   background-size: cover;
 }
 
@@ -25,6 +21,7 @@ h3 {
   text-align: center;
   /* margin-top: 10px; */
 }
+
 .App {
   text-align: center;
   font-size: 22px;
@@ -52,4 +49,40 @@ input.inputBox {
   border: 1px solid #ccc;
   z-index: 999;
 }
+
+.activities-list {
+  list-style: none;
+  padding: 0;
+  color: white;
+}
+
+.activities-list li {
+  margin-bottom: 0.5rem;
+}
+
+.activities-list-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inputActivities {
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  margin: 0;
+  vertical-align: bottom;
+  position: relative;
+  top: -1px;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  vertical-align: middle;
+  margin-top: 10px;
+
+}
+
 
