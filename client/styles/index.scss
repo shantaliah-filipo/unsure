@@ -2,22 +2,23 @@
 
 html, 
 body {
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  // font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Quicksand;
   background: url('../../server/public/images/aitutaki-unsplash.jpg') no-repeat center center fixed;
-  
   background-size: cover;
 }
 
-h1 {
-  font-size: 40pt;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  color: white;
-  text-align: center;
-}
+
+// h1 {
+//   font-size: 40pt;
+//   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+//   color: white;
+//   text-align: center;
+// }
 
 h3 {
   font-size: 15pt;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  // font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: white;
   text-align: center;
   /* margin-top: 10px; */
@@ -26,6 +27,17 @@ h3 {
 .App {
   text-align: center;
   font-size: 22px;
+  
+}
+
+.header {
+  padding: 10px;
+  text-align: center;
+  // background: #1abc9c;
+  border-color: white;
+  color: white;
+  font-size: 1rem;
+  // font-family: 
 }
 
 input.inputBox {

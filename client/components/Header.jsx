@@ -1,7 +1,11 @@
 import React from 'react'
 
 function Header() {
-  return <h1>Plan your trip to Rarotonga!</h1>
+  return (
+    <div className="header">
+      <h1>PLAN YOUR TRIP TO RAROTONGA</h1>
+    </div>
+  )
 }
 
 export default Header
