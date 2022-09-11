@@ -9,19 +9,16 @@ exports.seed = async function (knex) {
     {
       id: 1,
       name: 'Lagoon Cruise',
-      // type: 'Water',
       activitiesType_id: 1,
     },
     {
       id: 2,
       name: 'Needle Walk',
-      // type: 'Land',
       activitiesType_id: 2,
     },
     {
       id: 3,
       name: 'Akirata Dance Troupe Island Night at the Islander Hotel',
-      // type: 'Cultural',
       activitiesType_id: 3,
     },
   ])
