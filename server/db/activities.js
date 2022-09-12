@@ -15,7 +15,7 @@ function addActivityType(activityType, db = connection) {
   return db('activityType')
     .insert({ type: activityType })
     .then(() => {
-      getActivityType(db)
+      return getActivityType(db)
     })
 }
 
