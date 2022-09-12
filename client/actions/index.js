@@ -1,18 +1,20 @@
-import { getFruits } from '../apis/fruits'
+import { getActivityTypes } from '../apis/activityTypes'
 
-export const SET_FRUITS = 'SET_FRUITS'
+export const SET_ACTIVITY_TYPE = 'SET_ACTIVITY_TYPE'
 
-export function setFruits(fruits) {
+// simple action
+export function setActivityType(activityType) {
   return {
-    type: SET_FRUITS,
-    payload: fruits,
+    type: SET_ACTIVITY_TYPE,
+    payload: activityType,
   }
 }
 
-export function fetchFruits() {
+// thunk - e.g. fetchactivitytype
+export function fetchActivityType() {
   return (dispatch) => {
-    return getFruits().then((fruits) => {
-      dispatch(setFruits(fruits))
+    return getActivityTypes().then((activityType) => {
+      dispatch(setActivityType(activityType))
     })
   }
 }
