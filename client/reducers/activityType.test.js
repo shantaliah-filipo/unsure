@@ -1,0 +1,1 @@
+import activityTypeReducer from "./activityType";
