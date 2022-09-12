@@ -4,7 +4,13 @@ function Submit() {
   function handleClick() {
     console.log('leshgoooo')
   }
-  return <button onClick={handleClick}>Leshgoooo</button>
+  return (
+    <div>
+      <button className="button" onClick={handleClick}>
+        Leshgoooo
+      </button>
+    </div>
+  )
 }
 
 export default Submit

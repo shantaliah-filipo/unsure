@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
+// import { getAllActivitiies } from '../../server/db/activities'
 import { activities } from '../utils/activities'
 
 function ActivityType() {
+  // console.log(getAllActivitiies)
   const [checkedState, setCheckedState] = useState()
 
   return (
