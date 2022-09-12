@@ -8,3 +8,12 @@ export function getActivityTypes() {
     return res.body.activityType
   })
 }
+
+export function addNewActivityType(newActivityType) {
+  return request
+    .post(rootUrl + '/act')
+    .send({ newActivityType })
+    .then((result) => {
+      return result.body.activityType
+    })
+}
