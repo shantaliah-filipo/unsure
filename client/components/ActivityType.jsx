@@ -1,12 +1,14 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { fetchActivityType } from '../actions'
+import { fetchActivityType, addActivityType } from '../actions'
+// import { addNewActivityType } from '../apis/activityTypes'
 // import { activities } from '../utils/activities'
 // useEffect
 // dispatch a think - e.g. fetchActivities
 // useSelector - looking for the activitiy types
 
 function ActivityType() {
+  const [newActivityType, setNewActivityType] = useState('')
   const activityTypes = useSelector((state) => state.activityTypes)
   const dispatch = useDispatch()
 
@@ -14,11 +16,20 @@ function ActivityType() {
     dispatch(fetchActivityType())
   }, [])
 
+  function handleChange(e) {
+    setNewActivityType(e.target.value)
+  }
+
+  function handleClick() {
+    dispatch(addActivityType(newActivityType))
+    setNewActivityType('')
+  }
+
   return (
     <div>
       <h3>Which Activities Interest You?</h3>
       <>
-        <form className="card">
+        <div className="card">
           <ul className="activities-list">
             {activityTypes.map(({ type }, index) => {
               return (
@@ -41,8 +52,12 @@ function ActivityType() {
             })}
             {/* </div> */}
           </ul>
-        </form>
+        </div>
       </>
+      <form>
+        <input onChange={handleChange} value={newActivityType} />
+        <button onClick={handleClick}>Add new activity type</button>
+      </form>
     </div>
   )
 }
