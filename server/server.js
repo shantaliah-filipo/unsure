@@ -8,6 +8,6 @@ const server = express()
 server.use(express.json())
 server.use(express.static(path.join(__dirname, 'public')))
 
-server.use('/api/v1/activities', activitiesRoutes)
+server.use('/api/v1/act', activitiesRoutes)
 
 module.exports = server
