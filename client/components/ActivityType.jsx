@@ -4,7 +4,7 @@ import { activities } from '../utils/activities'
 
 function ActivityType() {
   // console.log(getAllActivitiies)
-  const [checkedState, setCheckedState] = useState()
+  // const [checkedState, setCheckedState] = useState()
 
   return (
     <div>
