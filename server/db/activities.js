@@ -11,7 +11,16 @@ function getAllActivities(db = connection) {
     .select()
 }
 
+function addActivityType(activityType, db = connection) {
+  return db('activityType')
+    .insert({ type: activityType })
+    .then(() => {
+      getActivityType(db)
+    })
+}
+
 module.exports = {
   getActivityType,
   getAllActivities,
+  addActivityType,
 }
