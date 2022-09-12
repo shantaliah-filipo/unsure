@@ -5,7 +5,7 @@ function getActivityType(db = connection) {
   return db('activities')
 }
 
-function getAllActivitiies(db = connection) {
+function getAllActivities(db = connection) {
   return db('activities')
     .join('activityType', 'activities.activityType_id', 'activities.id')
     .select()
@@ -13,5 +13,5 @@ function getAllActivitiies(db = connection) {
 
 module.exports = {
   getActivityType,
-  getAllActivitiies,
+  getAllActivities,
 }
