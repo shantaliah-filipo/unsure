@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 
-import fruits from './fruits'
+import activityTypes from './activityType'
 
 export default combineReducers({
-  fruits,
+  activityTypes,
 })
