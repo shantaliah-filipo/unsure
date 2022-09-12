@@ -7,7 +7,7 @@ const router = express.Router()
 router.get('/', (req, res) => {
   db.getActivityType()
     .then((results) => {
-      res.json({ activities: results.map((activity) => activity.name) })
+      res.json({ activityType: results })
     })
     .catch((err) => {
       console.log(err)

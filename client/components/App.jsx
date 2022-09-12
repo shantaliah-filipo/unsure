@@ -2,6 +2,7 @@ import React from 'react'
 import Header from './Header'
 import DateRangeSelector from './DateRangeSelector'
 import ActivityType from './ActivityType'
+import Activities from './Activities'
 import Submit from './Submit'
 
 function App() {
@@ -12,6 +13,8 @@ function App() {
         <DateRangeSelector />
         <ActivityType />
         <Submit />
+
+        <Activities />
       </div>
     </>
   )
