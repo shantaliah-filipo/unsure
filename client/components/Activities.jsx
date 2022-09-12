@@ -14,7 +14,7 @@ function Activities() {
   // console.log(initialState)
 
   const activities = useSelector((state) => state.activities)
-  return <>Hi</>
+  return <></>
 }
 
 export default Activities
