@@ -6,7 +6,9 @@ function Submit() {
   }
   return (
     <div>
-      <button onClick={handleClick}>Leshgoooo</button>
+      <button className="button" onClick={handleClick}>
+        Leshgoooo
+      </button>
     </div>
   )
 }
