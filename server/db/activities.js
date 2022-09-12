@@ -2,7 +2,7 @@ const connection = require('./connection')
 // const activities = require('../../migrations/20220911052852_activities')
 
 function getActivityType(db = connection) {
-  return db('activities')
+  return db('activityType').select()
 }
 
 function getAllActivities(db = connection) {
