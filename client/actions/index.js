@@ -6,7 +6,7 @@ export const SET_ACTIVITY_TYPES_SUCCESS = 'SET_ACTIVITY_TYPES_SUCCESS'
 export const SET_ERROR = 'SET_ERROR'
 
 // simple action
-export function setActivityType(activityType) {
+export function setActivityTypesSuccess(activityType) {
   return {
     type: SET_ACTIVITY_TYPE,
     payload: activityType,
@@ -16,8 +16,8 @@ export function setActivityType(activityType) {
 // thunks - e.g. fetchactivitytype
 export function fetchActivityType() {
   return (dispatch) => {
-    return getActivityTypes().then((activityType) => {
-      dispatch(setActivityType(activityType))
+    return getActivityTypes().then((activityTypes) => {
+      dispatch(setActivityTypesSuccess(activityTypes))
     })
   }
 }
@@ -25,8 +25,8 @@ export function fetchActivityType() {
 export function addActivityType(newActivityType) {
   return (dispatch) => {
     return addNewActivityType(newActivityType)
-      .then((activityType) => {
-        dispatch(setActivityTypesSuccess(activityType))
+      .then((allActivityTypes) => {
+        dispatch(setActivityTypesSuccess(allActivityTypes))
         return null
       })
       .catch((err) => {
@@ -38,13 +38,6 @@ export function addActivityType(newActivityType) {
 export function setActivityTypesPending() {
   return {
     type: SET_ACTIVITY_TYPES_PENDING,
-  }
-}
-
-export function setActivityTypesSuccess(activityType) {
-  return {
-    type: SET_ACTIVITY_TYPES_SUCCESS,
-    activityType,
   }
 }
 
