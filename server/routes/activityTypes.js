@@ -1,6 +1,6 @@
 const express = require('express')
 
-const db = require('../db/activities')
+const db = require('../db/activityTypes')
 
 const router = express.Router()
 
