@@ -7,7 +7,7 @@ const activityTypeReducer = (state = initialState, action) => {
   switch (type) {
     // set_activity
     case SET_ACTIVITY_TYPE:
-      return payload 
+      return payload
     default:
       return state
   }
