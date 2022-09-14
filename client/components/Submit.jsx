@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
 
+const leshgoSound = new Audio('../audio/kuki-drumming.mp3')
+
 function Submit() {
   const [submit, setSubmit] = useState()
 
-  function handleClick(e) {
-    setSubmit(e.target.value)
+  function handleClick() {
+    leshgoSound.play()
+    // setSubmit(e.target.value)
     console.log('leshgoooo')
   }
 
