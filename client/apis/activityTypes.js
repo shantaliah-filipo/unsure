@@ -17,3 +17,9 @@ export function addNewActivityType(newActivityType) {
       return result.body.activityType
     })
 }
+
+export function getAllActivities() {
+  return request.get(rootUrl + '/all-activities').then((res) => {
+    return res.body.activities
+  })
+}
